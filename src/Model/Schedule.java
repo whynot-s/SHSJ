@@ -28,4 +28,19 @@ public class Schedule {
         return result;
     }
 
+    public String getTeamName(){
+        return teamName;
+    }
+
+    public String toInsertSQL(int project_id){
+        String pattern = "(%d,%d,%s)";
+        String sql = "";
+        for(int i = 0; i < teamSchedule.size(); i++){
+            ScheduleDay sd = teamSchedule.get(i);
+            sql += String.format(pattern, project_id, i + 1, sd.toInserSQL());
+            if(i != teamSchedule.size() - 1)sql += ",";
+        }
+        return sql;
+    }
+
 }

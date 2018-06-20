@@ -37,4 +37,15 @@ public class Project {
         return result;
     }
 
+    public String toInfoSQL_Dupilicate(){
+        return String.format("depNo=%d AND teamName=\'%s\' AND teamLeaderId=\'%s\'",
+                depNo, teamName, teamLeader);
+    }
+
+    public String toInfoSQL(boolean comma){
+        String sql = String.format("%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\'", depNo, teamName, teamLeader, teamLeaderPhone, teacher, teacherPhone);
+        if(comma)return sql + ",";
+        else return sql;
+    }
+
 }

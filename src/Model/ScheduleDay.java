@@ -16,4 +16,8 @@ public class ScheduleDay {
         return String.format("%s:%s-%s", SchDate, Province, City);
     }
 
+    public String toInserSQL(){
+        return String.format("\'%s\',\'%s\',\'%s\'", SchDate, Province, City);
+    }
+
 }
