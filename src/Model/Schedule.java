@@ -10,7 +10,7 @@ public class Schedule {
 
     public Schedule(String teamName){
         this.teamName = teamName;
-        teamSchedule = new ArrayList<ScheduleDay>();
+        teamSchedule = new ArrayList<>();
     }
 
     public void append(String date, String province, String city){
