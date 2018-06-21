@@ -49,7 +49,7 @@ public class ExcelReader {
                 return -2;
             }
             if(project == null)return -3;
-            for(int i = 6; i < row.getLastCellNum(); i+=2){
+            for(int i = 6; i <= row.getLastCellNum(); i+=2){
                 String no = readCell(row.getCell(i));
                 String name = readCell(row.getCell(i + 1));
                 if(no.equals("") || name.equals(""))continue;
@@ -86,6 +86,20 @@ public class ExcelReader {
                 schedule.append(dates.get((cellNum - 1)/2), province, city);
             }
             if(schedule.size() > 0)schedules.add(schedule);
+        }
+        return 0;
+    }
+
+    public int readRegions(List<String> procities){
+        HSSFSheet sheet = wb.getSheet("省市");
+        if(sheet == null)return -1;
+        for(int i = 0; i <= sheet.getRow(0).getLastCellNum(); i++){
+            String province = readCell(sheet.getRow(0).getCell(i));
+            for(int j = 1; j <= sheet.getLastRowNum();j++){
+                String city = readCell(sheet.getRow(j).getCell(i));
+                if(city.equals(""))break;
+                procities.add(String.format("(\'%s\',\'%s\')", province, city));
+            }
         }
         return 0;
     }

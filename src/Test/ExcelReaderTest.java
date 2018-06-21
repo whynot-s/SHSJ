@@ -1,6 +1,7 @@
 package Test;
 
 import DBTools.DBProject;
+import DBTools.DBRegion;
 import DBTools.DBSchedule;
 import Model.Project;
 import Model.Schedule;
@@ -35,6 +36,13 @@ public class ExcelReaderTest {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }
+        List<String> procities = new ArrayList<>();
+        excelReader.readRegions(procities);
+        try {
+            DBRegion.InsertProCity(procities);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
