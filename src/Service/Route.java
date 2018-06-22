@@ -20,7 +20,6 @@ public class Route {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(points.size() == 0 || deps.size() == 0)return "[]";
         List<Object> routes = new ArrayList<>();
         for(Map.Entry<Integer, List<Double[]>> point : points.entrySet()){
             int key = point.getKey();
@@ -33,8 +32,8 @@ public class Route {
                 List<Object> latlon = new ArrayList<>();
                 JSONObject p1 = new JSONObject();
                 JSONObject p2 = new JSONObject();
-                p1.put("Coord", value.get(i));
-                p2.put("Coord", value.get(i + 1));
+                p1.put("Coord", value.get(i + 1));
+                p2.put("Coord", value.get(i));
                 latlon.add(p1);
                 latlon.add(p2);
                 pairs.add(latlon);
@@ -42,7 +41,6 @@ public class Route {
             route.put("data", pairs);
             routes.add(route);
         }
-        System.out.println(new JSONArray(routes));
-        return "[]";
+        return (new JSONArray(routes)).toString();
     }
 }

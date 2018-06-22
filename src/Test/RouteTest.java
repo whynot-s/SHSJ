@@ -7,7 +7,8 @@ public class RouteTest {
 
     @Test
     public void testRoute(){
-        Route.getRouteJSON("2018-07-07", "2018-07-14");
+        String json = Route.getRouteJSON("2018-07-06", "2018-07-14");
+        System.out.println(json);
     }
 
 }
