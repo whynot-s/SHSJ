@@ -16,7 +16,7 @@ public class DBPeople {
             "AND Schedule.praProvince = LALONG.Province AND Schedule.praCity = LALONG.City";
 
     public static int selectMemberMap(String curDate, Map<String, Double[]> Coords, Map<Integer, Map<String, Integer>> Counts) throws SQLException {
-        Connection conn = DBtools.DBUtil.getConnection();
+        Connection conn = DBUtil.getConnection();
         Statement stmt = conn.createStatement();
         ResultSet resultSet = stmt.executeQuery(String.format(MemberMapSQL, curDate));
         while(resultSet.next()){
@@ -36,7 +36,7 @@ public class DBPeople {
             if(time == null) count.put(city, resultSet.getInt("num"));
             else count.put(city, time + resultSet.getInt("num"));
         }
-        DBtools.DBUtil.Close();
+        DBUtil.Close();
         return 0;
     }
 

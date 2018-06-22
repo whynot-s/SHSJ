@@ -19,7 +19,7 @@ public class DBSchedule {
 
     public static int InsertSchedule(Schedule schedule) throws SQLException {
         int re = 0;
-        Connection conn = DBtools.DBUtil.getConnection();
+        Connection conn = DBUtil.getConnection();
         Statement stmt = conn.createStatement();
         ResultSet resultSet = stmt.executeQuery(String.format(ProjectSQL_Name, schedule.getTeamName()));
         int teamId = -1;
@@ -35,7 +35,7 @@ public class DBSchedule {
         String sql = String.format(ScheduleSQL, schedule.toInsertSQL(teamId));
         System.out.println(sql);
         stmt.execute(sql);
-        DBtools.DBUtil.Close();
+        DBUtil.Close();
         return re;
     }
 

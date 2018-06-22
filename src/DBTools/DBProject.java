@@ -20,7 +20,7 @@ public class DBProject {
 
     public static int InsertProject(Project project) throws SQLException {
         int re = 0;
-        Connection conn = DBtools.DBUtil.getConnection();
+        Connection conn = DBUtil.getConnection();
         Statement stmt = conn.createStatement();
         String sql = String.format(ProjectSQL_Duplicate, project.toInfoSQL_Dupilicate());
         ResultSet resultSet = stmt.executeQuery(sql);
@@ -39,7 +39,7 @@ public class DBProject {
             re = resultSet.getInt("id");
         else
             re = -1;
-        DBtools.DBUtil.Close();
+        DBUtil.Close();
         return re;
     }
 }

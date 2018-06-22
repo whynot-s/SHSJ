@@ -17,7 +17,7 @@ public class DBRoute {
             "AND Schedule.praCity = LALONG.City AND project_id = Project.id";
 
     public static int selectRoute(String startDate, String endDate, Map<Integer, List<Double[]>> points, Map<Integer, Integer> deps) throws SQLException {
-        Connection conn = DBtools.DBUtil.getConnection();
+        Connection conn = DBUtil.getConnection();
         Statement stmt = conn.createStatement();
         ResultSet resultSet = stmt.executeQuery(String.format(RouteSQL, startDate, endDate));
         while(resultSet.next()){
