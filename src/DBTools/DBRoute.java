@@ -28,8 +28,8 @@ public class DBRoute {
             }
             List<Double[]> point = points.get(pid);
             Double[] latlon = new Double[2];
-            latlon[0] = resultSet.getDouble("lat");
-            latlon[1] = resultSet.getDouble("lon");
+            latlon[0] = resultSet.getDouble("lon");
+            latlon[1] = resultSet.getDouble("lat");
             point.add(latlon);
             points.put(pid, point);
         }

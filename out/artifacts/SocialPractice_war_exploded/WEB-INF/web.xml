@@ -12,4 +12,14 @@
         <servlet-name>MemberMapServlet</servlet-name>
         <url-pattern>/MemberMap</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RouteServlet</servlet-name>
+        <servlet-class>Servlets.RouteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RouteServlet</servlet-name>
+        <url-pattern>/Route</url-pattern>
+    </servlet-mapping>
 </web-app>
