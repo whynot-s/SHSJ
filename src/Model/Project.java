@@ -43,7 +43,8 @@ public class Project {
     }
 
     public String toInfoSQL(boolean comma){
-        String sql = String.format("%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\'", depNo, teamName, teamLeader, teamLeaderPhone, teacher, teacherPhone);
+        String sql = String.format("%d, \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', %d",
+                depNo, teamName, teamLeader, teamLeaderPhone, teacher, teacherPhone, members.size());
         if(comma)return sql + ",";
         else return sql;
     }

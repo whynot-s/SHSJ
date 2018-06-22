@@ -14,7 +14,7 @@ public class DBProject {
     final private static String ProjectSQL_Insert = "iNSERT INTO Project VALUES(%d,%s)";
 
     final private static String ProjectSQL = "INSERT INTO Project(depNo, teamName, " +
-            "teamLeaderId, teamLeaderPhone, teamTeacher, teacherPhone) VALUES(%s)";
+            "teamLeaderId, teamLeaderPhone, teamTeacher, teacherPhone, memberNum) VALUES(%s)";
 
     final private static String ProjectSQL_Delete = "DELETE FROM Project WHERE id=%d";
 
