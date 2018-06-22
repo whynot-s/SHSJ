@@ -1,5 +1,6 @@
 package Test;
 
+import DBTools.DBMember;
 import DBTools.DBProject;
 import DBTools.DBRegion;
 import DBTools.DBSchedule;
@@ -18,31 +19,25 @@ public class ExcelReaderTest {
     public void test1() {
         ExcelReader excelReader = new ExcelReader("/Users/wangjiaruijue/Documents/SocialPractice/test.xls");
         List<Project> projects = new ArrayList<>();
-        System.out.println(excelReader.readProject(projects));
+        excelReader.readProject(projects);
         for(Project project : projects) {
             System.out.println(project.toString());
             try {
-                DBProject.InsertProject(project);
+                int pid = DBProject.InsertProject(project);
+                DBMember.InsertProjectMember(pid, project);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-        List<Schedule> schedules = new ArrayList<>();
-        System.out.println(excelReader.readSchedule(schedules));
-        for(Schedule schedule : schedules) {
-            System.out.println(schedule.toString());
-            try {
-                DBSchedule.InsertSchedule(schedule);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        List<String> procities = new ArrayList<>();
-        excelReader.readRegions(procities);
-        try {
-            DBRegion.InsertProCity(procities);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//        List<Schedule> schedules = new ArrayList<>();
+//        System.out.println(excelReader.readSchedule(schedules));
+//        for(Schedule schedule : schedules) {
+//            System.out.println(schedule.toString());
+//            try {
+//                DBSchedule.InsertSchedule(schedule);
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 }

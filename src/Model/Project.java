@@ -48,4 +48,20 @@ public class Project {
         else return sql;
     }
 
+    public String toMemberSQL(){
+        String sql = "";
+        for(Map.Entry<String, String> entry : members.entrySet()){
+            sql += String.format("(\'%s\',\'%s\'),", entry.getKey(), entry.getValue());
+        }
+        return sql.substring(0, sql.length() - 1);
+    }
+
+    public String toSchMemberSQL(int pid){
+        String sql = "";
+        for(Map.Entry<String, String> entry : members.entrySet()){
+            sql += String.format("(%d, \'%s\'),", pid, entry.getKey());
+        }
+        return sql.substring(0, sql.length() - 1);
+    }
+
 }

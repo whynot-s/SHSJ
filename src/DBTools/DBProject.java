@@ -33,6 +33,12 @@ public class DBProject {
             sql = String.format(ProjectSQL, project.toInfoSQL(false));
         }
         stmt.execute(sql);
+        sql = String.format(ProjectSQL_Duplicate, project.toInfoSQL_Dupilicate());
+        resultSet = stmt.executeQuery(sql);
+        if(resultSet.next())
+            re = resultSet.getInt("id");
+        else
+            re = -1;
         DBtools.DBUtil.Close();
         return re;
     }
