@@ -23,10 +23,16 @@ public class DBProject {
 
     final private static String ProjectSQL_Delete = "DELETE FROM Project WHERE id=%d";
 
-    final private static String ProjectSQL_SELECT = "SELECT id, depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
+    final private static String ProjectSQL_SELECT = "SELECT depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
             "teamTeacher AS tte, memberNum AS men FROM Project, Member WHERE Member.stuNo = Project.teamLeaderId AND id = %d";
 
-    final private static String[] heads = {"id", "dep", "tna", "lna", "tte", "men"};
+    final private static String ProjectSQL_SELECT_FULL = "SELECT depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
+            "teamTeacher AS tte, memberNum AS men, teamLeaderPhone AS lpn, teacherPhone AS ttp " +
+            "FROM Project, Member WHERE Member.stuNo = Project.teamLeaderId AND id = %d";
+
+    final private static String[] heads = {"dep", "tna", "lna", "tte", "men"};
+
+    final private static String[] full_heads = {"dep", "tna", "lna", "lpn", "tte", "ttp", "men"};
 
     public static int InsertProject(Project project) throws SQLException {
         int re = 0;
@@ -53,14 +59,14 @@ public class DBProject {
         return re;
     }
 
-    public static JSONObject SelectProjectBrief(Connection conn , int project_id) throws SQLException {
+    public static JSONObject SelectProject(Connection conn , int project_id, boolean full) throws SQLException {
         Statement stmt = conn.createStatement();
-        ResultSet resultSet = stmt.executeQuery(String.format(ProjectSQL_SELECT, project_id));
+        String sql = full ? ProjectSQL_SELECT_FULL : ProjectSQL_SELECT;
+        ResultSet resultSet = stmt.executeQuery(String.format(sql, project_id));
         resultSet.next();
         Map<String, Object> project = new HashMap<>();
-        for(String head : heads){
-            project.put(head, resultSet.getObject(head));
-        }
+        if(!full)for(String head : heads) project.put(head, resultSet.getObject(head));
+        else for(String head : full_heads) project.put(head, resultSet.getObject(head));
         return new JSONObject(project);
     }
 

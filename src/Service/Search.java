@@ -1,6 +1,8 @@
 package Service;
 
+import DBTools.DBMember;
 import DBTools.DBProject;
+import DBTools.DBSchedule;
 import DBTools.DBUtil;
 import Model.SearchParams;
 import org.json.JSONArray;
@@ -12,7 +14,7 @@ import java.util.*;
 
 public class Search {
 
-    final private static String[] keys = {"ProjectList"};
+    final private static String[] keys = {"ProjectList", "Projects", "Information", "Member", "Schedule"};
     private Connection conn;
     private Map<String, Object> params;
     private JSONObject result;
@@ -48,9 +50,17 @@ public class Search {
         Set<Integer> pids = new HashSet<>();
         search_pid(pids);
         List<Object> projectInfo = new ArrayList<>();
-        for(Integer pid : pids)
-            projectInfo.add(DBProject.SelectProjectBrief(conn, pid));
+        List<Object> projects = new ArrayList<>();
+        for(Integer pid : pids) {
+            projectInfo.add(DBProject.SelectProject(conn, pid, false));
+            JSONObject project = new JSONObject();
+            project.put(keys[2], DBProject.SelectProject(conn, pid, true));
+            project.put(keys[3], DBMember.SelectProjectMember(conn, pid));
+            project.put(keys[4], DBSchedule.SelectProjectSchedule(conn, pid));
+            projects.add(project);
+        }
         result.put(keys[0], new JSONArray(projectInfo));
+        result.put(keys[1], new JSONArray(projects));
     }
 
     public String getResult(){
