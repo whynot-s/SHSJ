@@ -22,4 +22,15 @@
         <servlet-name>RouteServlet</servlet-name>
         <url-pattern>/Route</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchSevlet</servlet-name>
+        <servlet-class>Servlets.SearchServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SearchSevlet</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

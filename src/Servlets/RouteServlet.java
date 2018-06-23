@@ -19,6 +19,7 @@ public class RouteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String startdate = request.getParameter("startdate");
         String enddate = request.getParameter("enddate");
+        response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println(Route.getRouteJSON(startdate, enddate));
         out.flush();

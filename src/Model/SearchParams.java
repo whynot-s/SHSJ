@@ -2,21 +2,27 @@ package Model;
 
 public enum SearchParams {
 
-    DEPARTMENT("dep"),
-    TEAMNAME("tname"),
-    TEACHER("teacher"),
-    DATE("date"),
-    STUDENTNO("stno"),
-    STUDENTNAME("stname");
+    DEPARTMENT("dep", true),
+    TEAMNAME("tname", false),
+    TEACHER("teacher", false),
+    DATE("date", false),
+    STUDENTNO("stno", false),
+    STUDENTNAME("stname", false);
 
     private String abbr;
+    private boolean isInt;
 
-    SearchParams(String abbr){
+    SearchParams(String abbr, boolean isInt){
         this.abbr = abbr;
+        this.isInt = isInt;
     }
 
     public String getKey(){
         return this.abbr;
+    }
+
+    public boolean IsInt(){
+        return this.isInt;
     }
 
 }
