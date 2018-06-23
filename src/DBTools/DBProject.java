@@ -1,11 +1,16 @@
 package DBTools;
 
 import Model.Project;
+import org.json.JSONObject;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DBProject {
 
@@ -17,6 +22,11 @@ public class DBProject {
             "teamLeaderId, teamLeaderPhone, teamTeacher, teacherPhone, memberNum) VALUES(%s)";
 
     final private static String ProjectSQL_Delete = "DELETE FROM Project WHERE id=%d";
+
+    final private static String ProjectSQL_SELECT = "SELECT id, depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
+            "teamTeacher AS tte, memberNum AS men FROM Project, Member WHERE Member.stuNo = Project.teamLeaderId AND id = %d";
+
+    final private static String[] heads = {"id", "dep", "tna", "lna", "tte", "men"};
 
     public static int InsertProject(Project project) throws SQLException {
         int re = 0;
@@ -42,4 +52,25 @@ public class DBProject {
         DBUtil.Close();
         return re;
     }
+
+    public static JSONObject SelectProjectBrief(Connection conn , int project_id) throws SQLException {
+        Statement stmt = conn.createStatement();
+        ResultSet resultSet = stmt.executeQuery(String.format(ProjectSQL_SELECT, project_id));
+        resultSet.next();
+        Map<String, Object> project = new HashMap<>();
+        for(String head : heads){
+            project.put(head, resultSet.getObject(head));
+        }
+        return new JSONObject(project);
+    }
+
+    public static List<Integer> SearchProject(Connection conn, String condition) throws SQLException {
+        Statement stmt = conn.createStatement();
+        ResultSet resultSet = stmt.executeQuery(String.format(ProjectSQL_Duplicate, condition));
+        List<Integer> pids = new ArrayList<>();
+        while(resultSet.next())
+            pids.add(resultSet.getInt("id"));
+        return pids;
+    }
+
 }

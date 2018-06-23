@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBSchedule {
 
@@ -16,6 +18,8 @@ public class DBSchedule {
     final private static String ProjectSQL_Name = "SELECT id FROM Project WHERE teamName=\'%s\'";
 
     final private static String ScheduleSQL = "INSERT INTO Schedule(project_id, dayNo, praDate, praProvince, praCity) VALUES%s";
+
+    final private static String ScheduleSQL_Search = "SELECT project_id FROM Schedule WHERE %s";
 
     public static int InsertSchedule(Schedule schedule) throws SQLException {
         int re = 0;
@@ -37,6 +41,15 @@ public class DBSchedule {
         stmt.execute(sql);
         DBUtil.Close();
         return re;
+    }
+
+    public static List<Integer> searchProject(Connection conn, String condition) throws SQLException {
+        Statement stmt = conn.createStatement();
+        ResultSet resultSet = stmt.executeQuery(String.format(ScheduleSQL_Search, condition));
+        List<Integer> pids = new ArrayList<>();
+        while(resultSet.next())
+            pids.add(resultSet.getInt("project_id"));
+        return pids;
     }
 
 }
