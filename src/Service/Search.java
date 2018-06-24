@@ -52,9 +52,9 @@ public class Search {
         List<Object> projectInfo = new ArrayList<>();
         List<Object> projects = new ArrayList<>();
         for(Integer pid : pids) {
-            projectInfo.add(DBProject.SelectProject(conn, pid, false));
+            projectInfo.add(DBProject.SelectProject(conn, pid));
             JSONObject project = new JSONObject();
-            project.put(keys[2], DBProject.SelectProject(conn, pid, true));
+            project.put(keys[2], DBProject.SelectProjectFull(conn, pid));
             project.put(keys[3], DBMember.SelectProjectMember(conn, pid));
             project.put(keys[4], DBSchedule.SelectProjectSchedule(conn, pid));
             projects.add(project);

@@ -7,19 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8335f017-6a81-4232-b997-bd332ee8c3db" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Servlets/SearchServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice/SocialPractice.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice/SocialPractice.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBMember.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBSchedule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search_sample.json" beforeDir="false" afterPath="$PROJECT_DIR$/Search_sample.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBTools/DBProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBProject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DBTools/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/SearchParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SearchParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/RouteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/RouteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Model/SearchParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Model/SearchParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Search.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,21 +22,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchParams.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/SearchParams.java">
+    <leaf>
+      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Service/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="56" column="70" selection-start-line="56" selection-start-column="70" selection-end-line="56" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +38,20 @@
       <file leaf-file-name="DBUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBTools/DBUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="195">
+              <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBProject.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,14 +107,14 @@
         <option value="$PROJECT_DIR$/src/Service/MemberReader.java" />
         <option value="$PROJECT_DIR$/src/DBTools/DBMember.java" />
         <option value="$PROJECT_DIR$/src/DBTools/DBSchedule.java" />
-        <option value="$PROJECT_DIR$/src/Service/Search.java" />
-        <option value="$PROJECT_DIR$/src/DBTools/DBProject.java" />
         <option value="$PROJECT_DIR$/src/Test/SearchTest.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/Model/SearchParams.java" />
         <option value="$PROJECT_DIR$/src/Servlets/SearchServlet.java" />
         <option value="$PROJECT_DIR$/src/Servlets/RouteServlet.java" />
+        <option value="$PROJECT_DIR$/src/Service/Search.java" />
         <option value="$PROJECT_DIR$/src/DBTools/DBUtil.java" />
+        <option value="$PROJECT_DIR$/src/DBTools/DBProject.java" />
       </list>
     </option>
   </component>
@@ -140,9 +135,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,9 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,6 +194,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat 9 - Remote">
+  <component name="RunManager" selected="JUnit.UnitTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -253,7 +247,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.RouteTest" />
+      <option name="MAIN_CLASS_NAME" value="Test.SearchTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -555,20 +549,12 @@
       <workItem from="1529639564274" duration="1518000" />
       <workItem from="1529641139102" duration="6909000" />
       <workItem from="1529663510658" duration="3000" />
-      <workItem from="1529715987706" duration="12817000" />
+      <workItem from="1529715987706" duration="13513000" />
+      <workItem from="1529831438712" duration="1002000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UnitTest - 2018.06.23 at 12h 07m 10s.xml">
-      <configuration name="UnitTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTest - 2018.06.23 at 12h 09m 01s.xml">
-      <configuration name="UnitTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTest - 2018.06.23 at 12h 09m 43s.xml">
-      <configuration name="UnitTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UnitTest - 2018.06.23 at 12h 10m 46s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
@@ -590,9 +576,18 @@
     <history-entry file="UnitTest - 2018.06.23 at 18h 10m 54s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UnitTest - 2018.06.24 at 17h 19m 03s.xml">
+      <configuration name="UnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTest - 2018.06.24 at 17h 19m 20s.xml">
+      <configuration name="UnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTest - 2018.06.24 at 17h 30m 20s.xml">
+      <configuration name="UnitTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67098000" />
+    <option name="totallyTimeSpent" value="68796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,8 +599,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005325" side_tool="true" weight="0.41393036" />
@@ -625,12 +619,11 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32935324" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32935324" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1440" height="877" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.41393036" />
+      <window_info anchor="bottom" x="0" y="23" width="1440" height="877" id="Run" order="2" sideWeight="0.49946752" weight="0.26545453" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935324" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8573854" visible="true" weight="0.1517572" />
-      <window_info id="Web" order="6" sideWeight="0.1426146" side_tool="true" visible="true" weight="0.1517572" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8557576" visible="true" weight="0.2067239" />
+      <window_info id="Web" order="6" sideWeight="0.14424242" side_tool="true" visible="true" weight="0.2067239" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -638,6 +631,7 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32935324" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
@@ -928,16 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/PeopleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -949,16 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,6 +970,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SearchParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1006,20 +987,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBTools/DBUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/Service/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="120">
+          <caret line="56" column="70" selection-start-line="56" selection-start-column="70" selection-end-line="56" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SearchParams.java">
+    <entry file="file://$PROJECT_DIR$/src/DBTools/DBUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="195">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

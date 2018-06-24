@@ -1,6 +1,7 @@
 package DBTools;
 
 import Model.Project;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.sql.Connection;
@@ -34,6 +35,8 @@ public class DBProject {
 
     final private static String[] full_heads = {"dep", "tna", "lna", "lpn", "tte", "ttp", "men"};
 
+    final private static String[] full_head_show = {"系号", "队名", "队长", "队长电话", "指导教师", "指导教师电话", "人数"};
+
     public static int InsertProject(Project project) throws SQLException {
         int re = 0;
         Connection conn = DBUtil.getConnection();
@@ -59,15 +62,29 @@ public class DBProject {
         return re;
     }
 
-    public static JSONObject SelectProject(Connection conn , int project_id, boolean full) throws SQLException {
+    public static JSONObject SelectProject(Connection conn , int project_id) throws SQLException {
         Statement stmt = conn.createStatement();
-        String sql = full ? ProjectSQL_SELECT_FULL : ProjectSQL_SELECT;
+        String sql = ProjectSQL_SELECT;
         ResultSet resultSet = stmt.executeQuery(String.format(sql, project_id));
         resultSet.next();
         Map<String, Object> project = new HashMap<>();
-        if(!full)for(String head : heads) project.put(head, resultSet.getObject(head));
-        else for(String head : full_heads) project.put(head, resultSet.getObject(head));
+        for(String head : heads) project.put(head, resultSet.getObject(head));
         return new JSONObject(project);
+    }
+
+    public static JSONArray SelectProjectFull(Connection conn, int project_id) throws SQLException {
+        Statement stmt = conn.createStatement();
+        String sql = ProjectSQL_SELECT_FULL;
+        ResultSet resultSet = stmt.executeQuery(String.format(sql, project_id));
+        resultSet.next();
+        List<Object> infos = new ArrayList<>();
+        for(int i = 0; i < full_heads.length; i++){
+            JSONObject info = new JSONObject();
+            info.put("key", full_head_show[i]);
+            info.put("value", resultSet.getObject(full_heads[i]));
+            infos.add(info);
+        }
+        return new JSONArray(infos);
     }
 
     public static List<Integer> SearchProject(Connection conn, String condition) throws SQLException {
