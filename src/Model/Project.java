@@ -25,7 +25,7 @@ public class Project {
 
     public int putMember(String no, String name){
         if(members.containsKey(no))
-            return -1;
+            System.out.printf("Duplicate : %s %s\n", no, name);
         members.put(no, name);
         return 0;
     }

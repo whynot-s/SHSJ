@@ -35,20 +35,27 @@ public class ExcelReader {
             if(row == null)continue;
             Project project = null;
             try {
-                double depno = Double.parseDouble(readCell(row.getCell(0)));
+                String p = readCell(row.getCell(0));
+                if(p.equals(""))p = "0";
+                double depno = Double.parseDouble(p);
                 int depNo = (int)depno;
                 String teamName = readCell(row.getCell(1));
+                if(teamName.equals(""))continue;
                 String teamLeader = readCell(row.getCell(6));
                 String teamLeaderPhone = readCell(row.getCell(3));
                 String teacher = readCell(row.getCell(4));
                 String teacherPhone = readCell(row.getCell(5));
                 if(readCell(row.getCell(7)).equals(readCell(row.getCell(2))))
                     project = new Project(teamName, depNo, teamLeader, teamLeaderPhone, teacher, teacherPhone);
+                if(project == null)System.out.println(teamName);
             }catch (Exception e){
-                System.out.println(e.toString());
+                e.printStackTrace();
                 return -2;
             }
-            if(project == null)return -3;
+            if(project == null){
+                System.out.printf("Bad TeamLeader: %s %s\n", readCell(row.getCell(7)), readCell(row.getCell(2)));
+                continue;
+            }
             for(int i = 6; i <= row.getLastCellNum(); i+=2){
                 String no = readCell(row.getCell(i));
                 String name = readCell(row.getCell(i + 1));

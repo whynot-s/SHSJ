@@ -13,34 +13,34 @@ import java.util.Map;
 public class Route {
 
     public static String getRouteJSON(String startDate, String endDate){
-        Map<Integer, List<Double[]>> points = new HashMap<>();
-        Map<Integer, Integer> deps = new HashMap<>();
+        Map<Integer, Map<String, Map<String, Integer>>> routes = new HashMap<>();
+        Map<String, Double[]> coords = new HashMap<>();
         try {
-            DBRoute.selectRoute(startDate, endDate, points, deps);
+            DBRoute.selectRoute(startDate, endDate, routes, coords);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        List<Object> routes = new ArrayList<>();
-        for(Map.Entry<Integer, List<Double[]>> point : points.entrySet()){
-            int key = point.getKey();
-            List<Double[]> value = point.getValue();
-            Map<String, Object> route = new HashMap<>();
-            route.put("dep", deps.get(key));
-            route.put("pid", key);
-            List<Object> pairs = new ArrayList<>();
-            for(int i = 0; i < value.size() - 1; i++){
-                List<Object> latlon = new ArrayList<>();
-                JSONObject p1 = new JSONObject();
-                JSONObject p2 = new JSONObject();
-                p1.put("Coord", value.get(i + 1));
-                p2.put("Coord", value.get(i));
-                latlon.add(p1);
-                latlon.add(p2);
-                pairs.add(latlon);
+        JSONObject route = new JSONObject();
+        route.put("Coordinates", new JSONObject(coords));
+        Map<Integer, Object> Routes = new HashMap<>();
+        for(Map.Entry<Integer, Map<String, Map<String, Integer>>> r : routes.entrySet()){
+            List<Object> tmp = new ArrayList<>();
+            for(Map.Entry<String, Map<String, Integer>> sd : r.getValue().entrySet()){
+                JSONObject s = new JSONObject();
+                s.put("name", sd.getKey());
+                for(Map.Entry<String, Integer> sdt : sd.getValue().entrySet()){
+                    JSONObject d = new JSONObject();
+                    d.put("name", sdt.getKey());
+                    d.put("value", sdt.getValue());
+                    List<Object> tt = new ArrayList<>();
+                    tt.add(s);
+                    tt.add(d);
+                    tmp.add(new JSONArray(tt));
+                }
             }
-            route.put("data", pairs);
-            routes.add(route);
+            Routes.put(r.getKey(), new JSONArray(tmp));
         }
-        return (new JSONArray(routes)).toString();
+        route.put("Routes", new JSONObject(Routes));
+        return route.toString();
     }
 }

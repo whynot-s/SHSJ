@@ -45,8 +45,12 @@ public class DBSchedule {
             re = 1;
             stmt.execute(String.format(ScheduleSQL_Delete, teamId));
         }
+        if(teamId == -1) {
+            System.out.println(schedule.getTeamName());
+            return 0;
+        }
         String sql = String.format(ScheduleSQL, schedule.toInsertSQL(teamId));
-        System.out.println(sql);
+//        System.out.println(sql);
         stmt.execute(sql);
         DBUtil.Close();
         return re;
