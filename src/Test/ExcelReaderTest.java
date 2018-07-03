@@ -19,9 +19,18 @@ public class ExcelReaderTest {
     @Test
     public void test1() {
         File directory = new File("/Users/wangjiaruijue/Documents/tw/data2");
+        String[] readpp = {"03", "04", "10", "12", "13", "07", "17", "团委", "14", "01",
+        "15", "29", "73", "校会", "74", "75", "76", "79", "30", "24", "18", "19", "蓝协",
+        "23", "09", "35", "21", "20", "08"};
         for(File file : directory.listFiles()) {
-            if(file.getAbsolutePath().contains("03.xls"))continue;
-            if(file.getAbsolutePath().contains("04.xls"))continue;
+            boolean flag = false;
+            for(String pp : readpp){
+                if(file.getAbsolutePath().contains(String.format("%s.xls", pp))){
+                    flag = true;
+                    break;
+                }
+            }
+            if(flag) continue;
             System.out.println(file.getAbsolutePath());
             ExcelReader excelReader = new ExcelReader(file.getAbsolutePath());
             List<Project> projects = new ArrayList<>();
@@ -45,6 +54,7 @@ public class ExcelReaderTest {
                     e.printStackTrace();
                 }
             }
+//            break;
         }
     }
 }
