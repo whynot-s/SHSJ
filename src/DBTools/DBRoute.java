@@ -41,6 +41,7 @@ public class DBRoute {
                     break;
                 }
                 String destination = resultSet.getString("City");
+                if(start.equals(destination)) continue;
                 Map<String, Map<String, Integer>> route = routes.get(dep);
                 if(route == null){
                     route = new HashMap<>();
@@ -67,8 +68,8 @@ public class DBRoute {
                     Double[] coord = coords.get(start);
                     if(coord == null){
                         coord = new Double[2];
-                        coord[0] = lat;
-                        coord[1] = lon;
+                        coord[1] = lat;
+                        coord[0] = lon;
                         coords.put(start, coord);
                     }
                 }
@@ -77,8 +78,8 @@ public class DBRoute {
                 Double[] coord = coords.get(destination);
                 if(coord == null){
                     coord = new Double[2];
-                    coord[0] = lat;
-                    coord[1] = lon;
+                    coord[1] = lat;
+                    coord[0] = lon;
                     coords.put(destination, coord);
                 }
                 start = destination;
