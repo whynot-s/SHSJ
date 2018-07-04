@@ -25,12 +25,21 @@ public class SearchServlet extends HttpServlet {
         for(SearchParams param : SearchParams.values()){
             if(param.IsInt()) {
                 try {
-                    params.put(param.getKey(), Integer.parseInt(request.getParameter(param.getKey())));
+                    String tmp = request.getParameter(param.getKey());
+                    if(tmp == null || tmp.equals("")){
+                        tmp = null;
+                        params.put(param.getKey(), tmp);
+                    }else {
+                        params.put(param.getKey(), Integer.parseInt(tmp));
+                    }
                 } catch(NumberFormatException ex){
                     params.put(param.getKey(), null);
                 }
-            }else
-                params.put(param.getKey(), request.getParameter(param.getKey()));
+            }else {
+                String tmp = request.getParameter(param.getKey());
+                if(tmp == null || tmp.equals("")) tmp = null;
+                params.put(param.getKey(), tmp);
+            }
         }
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();

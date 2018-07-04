@@ -35,6 +35,8 @@ public class Search {
         );
         re = ScheduleReader.searchProject(conn, pids,
                 (String)  params.get(SearchParams.DATE.getKey()),
+                (String)  params.get(SearchParams.PROVINCE.getKey()),
+                (String)  params.get(SearchParams.CITY.getKey()),
                 ! re
         );
         re = MemberReader.searchProject(conn, pids,

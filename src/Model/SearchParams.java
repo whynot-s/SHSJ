@@ -7,7 +7,9 @@ public enum SearchParams {
     TEACHER("teacher", false),
     DATE("date", false),
     STUDENTNO("stno", false),
-    STUDENTNAME("stname", false);
+    STUDENTNAME("stname", false),
+    PROVINCE("pro", false),
+    CITY("cit", false);
 
     private String abbr;
     private boolean isInt;

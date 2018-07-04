@@ -10,7 +10,7 @@ import java.util.Map;
 public class DBPeople {
 
     final private static String MemberMapSQL = "SELECT Project.id AS pid, Project.depNo AS dep, " +
-            "Schedule.praProvince AS pro, Schedule.praCity AS cit, " +
+            "Schedule.praProvince AS pro, Schedule.praCity AS cit, LALONG.useCenter AS uc, " +
             "LALONG.latitude AS lat, LALONG.longtitude AS lon, Project.memberNum AS num FROM Project, Schedule, LALONG " +
             "WHERE Schedule.praDate = \'%s\' AND Project.id = Schedule.project_id " +
             "AND Schedule.praProvince = LALONG.Province AND Schedule.praCity = LALONG.City";
@@ -21,6 +21,8 @@ public class DBPeople {
         ResultSet resultSet = stmt.executeQuery(String.format(MemberMapSQL, curDate));
         while(resultSet.next()){
             String city = resultSet.getString("cit");
+            if(resultSet.getInt("uc") == 1)
+                city = resultSet.getString("pro");
             Double[] latlon = Coords.get(city);
             if(latlon == null){
                 latlon = new Double[2];

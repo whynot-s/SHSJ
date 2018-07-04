@@ -9,11 +9,21 @@ import java.util.Set;
 
 public class ScheduleReader {
 
-    public static boolean searchProject(Connection conn, Set<Integer> result, String date, boolean first) throws SQLException {
+    public static boolean searchProject(Connection conn, Set<Integer> result, String date, String pro, String cit, boolean first) throws SQLException {
         String condition = "";
         boolean AND = false;
         if(date != null){
             condition += String.format("praDate = \'%s\' ", date);
+            AND = true;
+        }
+        if(pro != null){
+            if(AND) condition += "AND ";
+            condition += String.format("praProvince LIKE \'%s%%\' ", pro);
+            AND = true;
+        }
+        if(cit != null){
+            if(AND) condition += "AND ";
+            condition += String.format("praCity LIKE \'%s%%\' ", cit);
             AND = true;
         }
         if(!AND) return false;
