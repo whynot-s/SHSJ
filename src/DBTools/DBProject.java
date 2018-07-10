@@ -31,6 +31,11 @@ public class DBProject {
             "teamTeacher AS tte, memberNum AS men, teamLeaderPhone AS lpn, teacherPhone AS ttp " +
             "FROM Project, Member WHERE Member.stuNo = Project.teamLeaderId AND id = %d";
 
+    final private static String ProjectNumber = "SELECT id FROM Project, Member WHERE Project.teamLeaderId = " +
+            "Member.stuNo AND teamName = \"%s\" AND Member.stuName = \"%s\" AND Project.teamTeacher = \"%s\"";
+
+    final private static String ProjectUpdateNumber = "UPDATE Project SET uid = \'%s\' WHERE id = %d";
+
     final private static String[] heads = {"dep", "tna", "lna", "tte", "men"};
 
     final private static String[] full_heads = {"dep", "tna", "lna", "lpn", "tte", "ttp", "men"};
@@ -94,6 +99,21 @@ public class DBProject {
         while(resultSet.next())
             pids.add(resultSet.getInt("id"));
         return pids;
+    }
+
+    public static List<Integer> ProjectNumber(Connection conn, String tname, String lname, String teacher) throws SQLException {
+        Statement stmt = conn.createStatement();
+        ResultSet resultSet = stmt.executeQuery(String.format(ProjectNumber, tname, lname, teacher));
+        List<Integer> result = new ArrayList<>();
+        while(resultSet.next()){
+            result.add(resultSet.getInt("id"));
+        }
+        return result;
+    }
+
+    public static void UpdateNumber(Connection conn, String uid, int id) throws SQLException {
+        Statement stmt = conn.createStatement();
+        stmt.execute(String.format(uid, id));
     }
 
 }

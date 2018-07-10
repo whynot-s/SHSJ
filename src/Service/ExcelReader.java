@@ -111,7 +111,7 @@ public class ExcelReader {
         return 0;
     }
 
-    private String readCell(HSSFCell cell){
+    public static String readCell(HSSFCell cell){
         if(cell == null) return "";
         else if(cell.getCellTypeEnum() == CellType.NUMERIC){
             if(HSSFDateUtil.isCellDateFormatted(cell)){

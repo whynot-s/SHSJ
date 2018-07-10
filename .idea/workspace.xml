@@ -7,16 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8335f017-6a81-4232-b997-bd332ee8c3db" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Service/NumberImporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/NumberImporterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice/SocialPractice.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice/SocialPractice.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice_war_exploded/WEB-INF/classes/DBTools/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBTools/DBSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBTools/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ProjectReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ProjectReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/ExcelReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/ExcelReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/DBTools/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/DBTools/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Service/ProjectReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Service/ProjectReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBTools/DBProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExcelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ExcelReader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,24 +22,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
         <option value="JUnit4 Test Class" />
       </list>
     </option>
@@ -78,10 +63,8 @@
         <option value="$PROJECT_DIR$/src/DBTools/DBMember.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/Servlets/RouteServlet.java" />
-        <option value="$PROJECT_DIR$/src/DBTools/DBProject.java" />
         <option value="$PROJECT_DIR$/src/Model/Project.java" />
         <option value="$PROJECT_DIR$/src/Test/PeopleTest.java" />
-        <option value="$PROJECT_DIR$/src/Service/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/Service/Route.java" />
         <option value="$PROJECT_DIR$/src/DBTools/DBRoute.java" />
         <option value="$PROJECT_DIR$/Route_sample.json" />
@@ -96,6 +79,10 @@
         <option value="$PROJECT_DIR$/src/DBTools/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/DBTools/DBSchedule.java" />
         <option value="$PROJECT_DIR$/src/Test/ExcelReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/Service/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/DBTools/DBProject.java" />
+        <option value="$PROJECT_DIR$/src/Service/NumberImporter.java" />
+        <option value="$PROJECT_DIR$/src/Test/NumberImporterTest.java" />
       </list>
     </option>
   </component>
@@ -186,9 +173,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,7 +226,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.ExcelReaderTest" />
+      <option name="MAIN_CLASS_NAME" value="Test.NumberImporterTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -561,43 +548,44 @@
       <workItem from="1530753655663" duration="176000" />
       <workItem from="1530837523075" duration="3000" />
       <workItem from="1531186025667" duration="1142000" />
+      <workItem from="1531188454660" duration="4250000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UnitTest - 2018.07.05 at 09h 16m 20s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 40m 57s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.05 at 09h 21m 31s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 49m 34s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.05 at 09h 21m 51s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 50m 25s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 34m 36s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 50m 33s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 34m 50s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 55m 31s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 35m 05s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 56m 06s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 49m 46s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 10h 56m 32s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 52m 40s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 11h 13m 12s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 53m 22s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 11h 13m 30s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UnitTest - 2018.07.10 at 09h 54m 46s.xml">
+    <history-entry file="UnitTest - 2018.07.10 at 11h 17m 42s.xml">
       <configuration name="UnitTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96217000" />
+    <option name="totallyTimeSpent" value="100467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,7 +598,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005325" side_tool="true" weight="0.41393036" />
@@ -630,10 +617,10 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32935324" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" x="0" y="23" width="1440" height="877" id="Run" order="2" sideWeight="0.49946752" weight="0.36363637" />
+      <window_info anchor="bottom" x="0" y="23" width="1440" height="877" id="Run" order="2" sideWeight="0.49946752" weight="0.3260606" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935324" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6899841" visible="true" weight="0.25965664" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6899841" visible="true" weight="0.26323318" />
       <window_info id="Web" order="6" sideWeight="0.3100159" side_tool="true" weight="0.22961374" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -653,20 +640,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/ScheduleDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBTools/DBSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/ExcelReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -781,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/JsonReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/ScheduleDay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -806,16 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,16 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/PeopleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/MemberMapServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -881,13 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/JsonReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -997,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/ExcelReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="85" column="61" lean-forward="true" selection-start-line="85" selection-start-column="61" selection-end-line="85" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBTools/DBSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -1011,17 +943,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/JsonReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/PeopleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/JsonReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/ExcelReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="570">
           <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Service/ExcelReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="345">
+          <caret line="51" column="36" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="115" column="45" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/NumberImporterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/NumberImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
