@@ -7,10 +7,11 @@ import java.sql.SQLException;
 public class DBUtil {
     private static String url="jdbc:mysql://localhost:3306/Socpra?useUnicode=true&characterEncoding=gb2312";
     private static String driverClass="com.mysql.jdbc.Driver";
-//    private static String username = "webuser";
-//    private static String password = "zxbl0000";
-    private static String username="dev";
-    private static String password="okcThunder00";
+    private static String username = "webuser";
+    private static String password = "zxbl0000";
+//    private static String username="dev";
+//    private static String pa
+// ssword="okcThunder00";
     private static Connection conn;
     //装载驱动
     static{

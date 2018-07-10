@@ -24,10 +24,10 @@ public class DBProject {
 
     final private static String ProjectSQL_Delete = "DELETE FROM Project WHERE id=%d";
 
-    final private static String ProjectSQL_SELECT = "SELECT depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
+    final private static String ProjectSQL_SELECT = "SELECT uid, depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
             "teamTeacher AS tte, memberNum AS men FROM Project, Member WHERE Member.stuNo = Project.teamLeaderId AND id = %d";
 
-    final private static String ProjectSQL_SELECT_FULL = "SELECT depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
+    final private static String ProjectSQL_SELECT_FULL = "SELECT uid, depNo AS dep, teamName AS tna, Member.stuName AS lna, " +
             "teamTeacher AS tte, memberNum AS men, teamLeaderPhone AS lpn, teacherPhone AS ttp " +
             "FROM Project, Member WHERE Member.stuNo = Project.teamLeaderId AND id = %d";
 
@@ -36,11 +36,11 @@ public class DBProject {
 
     final private static String ProjectUpdateNumber = "UPDATE Project SET uid = \'%s\' WHERE id = %d";
 
-    final private static String[] heads = {"dep", "tna", "lna", "tte", "men"};
+    final private static String[] heads = {"uid", "dep", "tna", "lna", "tte", "men"};
 
-    final private static String[] full_heads = {"dep", "tna", "lna", "lpn", "tte", "ttp", "men"};
+    final private static String[] full_heads = {"uid", "dep", "tna", "lna", "lpn", "tte", "ttp", "men"};
 
-    final private static String[] full_head_show = {"系号", "队名", "队长", "队长电话", "指导教师", "指导教师电话", "人数"};
+    final private static String[] full_head_show = {"编号", "系号", "队名", "队长", "队长电话", "指导教师", "指导教师电话", "人数"};
 
     public static int InsertProject(Project project) throws SQLException {
         int re = 0;

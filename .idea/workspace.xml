@@ -8,18 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8335f017-6a81-4232-b997-bd332ee8c3db" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SocialPractice/SocialPractice.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SocialPractice/SocialPractice.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/SearchParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SearchParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ProjectReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ProjectReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/DBTools/DBProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/DBTools/DBProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Model/SearchParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Model/SearchParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Service/NumberImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Service/NumberImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Service/ProjectReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Service/ProjectReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Service/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Service/Search.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Test/NumberImporterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Test/NumberImporterTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Test/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Test/SearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBTools/DBProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBTools/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBTools/DBUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,56 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SearchServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Servlets/SearchServlet.java">
+      <file leaf-file-name="SearchParams.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/SearchParams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleReader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Service/ScheduleReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="11" column="114" lean-forward="true" selection-start-line="11" selection-start-column="114" selection-end-line="11" selection-end-column="114" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Service/Search.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Service/ProjectReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="11" column="131" selection-start-line="11" selection-start-column="131" selection-end-line="11" selection-end-column="131" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -134,11 +79,9 @@
         <option value="$PROJECT_DIR$/src/DBTools/DBPeople.java" />
         <option value="$PROJECT_DIR$/MemberMap_sample.json" />
         <option value="$PROJECT_DIR$/src/Servlets/SearchServlet.java" />
-        <option value="$PROJECT_DIR$/src/DBTools/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/DBTools/DBSchedule.java" />
         <option value="$PROJECT_DIR$/src/Test/ExcelReaderTest.java" />
         <option value="$PROJECT_DIR$/src/Service/ExcelReader.java" />
-        <option value="$PROJECT_DIR$/src/DBTools/DBProject.java" />
         <option value="$PROJECT_DIR$/src/Service/NumberImporter.java" />
         <option value="$PROJECT_DIR$/src/Test/NumberImporterTest.java" />
         <option value="$PROJECT_DIR$/src/Model/SearchParams.java" />
@@ -146,6 +89,8 @@
         <option value="$PROJECT_DIR$/src/Service/ScheduleReader.java" />
         <option value="$PROJECT_DIR$/src/Service/ProjectReader.java" />
         <option value="$PROJECT_DIR$/src/Service/Search.java" />
+        <option value="$PROJECT_DIR$/src/DBTools/DBUtil.java" />
+        <option value="$PROJECT_DIR$/src/DBTools/DBProject.java" />
       </list>
     </option>
   </component>
@@ -175,9 +120,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +183,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,7 +196,7 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28391472" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -280,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UnitTest">
+  <component name="RunManager" selected="Tomcat Server.tomcat 9 - Remote">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -612,7 +557,9 @@
       <workItem from="1530837523075" duration="3000" />
       <workItem from="1531186025667" duration="1142000" />
       <workItem from="1531188454660" duration="4250000" />
-      <workItem from="1531193826542" duration="313000" />
+      <workItem from="1531193826542" duration="371000" />
+      <workItem from="1531202869459" duration="6000" />
+      <workItem from="1531205924182" duration="1215000" />
     </task>
     <servers />
   </component>
@@ -649,7 +596,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100780000" />
+    <option name="totallyTimeSpent" value="102059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,10 +629,11 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32935324" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32848486" />
       <window_info active="true" anchor="bottom" x="0" y="23" width="1440" height="877" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.41575757" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935324" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6899841" visible="true" weight="0.26680973" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6899841" visible="true" weight="0.2739628" />
       <window_info id="Web" order="6" sideWeight="0.3100159" side_tool="true" weight="0.22961374" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -694,7 +642,6 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32848486" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
@@ -941,13 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBTools/DBUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBTools/DBSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -990,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="115" column="45" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/NumberImporterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1008,37 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SearchParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlets/SearchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,11 +956,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/ScheduleReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
+        <state relative-caret-position="79">
           <caret line="11" column="114" lean-forward="true" selection-start-line="11" selection-start-column="114" selection-end-line="11" selection-end-column="114" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlets/SearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/SearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBTools/DBProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBTools/DBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SearchParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -1069,9 +1016,9 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="jpa-descriptors" />
               <type id="library" />
               <type id="artifact" />
+              <type id="jpa-descriptors" />
               <type id="javaee-facet-resources" />
             </show-content>
           </artifact-editor>
@@ -1104,7 +1051,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.27968037" />
+                <option value="0.28391472" />
               </list>
             </option>
           </splitter-proportions>
