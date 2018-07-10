@@ -10,8 +10,7 @@ public class DBUtil {
     private static String username = "webuser";
     private static String password = "zxbl0000";
 //    private static String username="dev";
-//    private static String pa
-// ssword="okcThunder00";
+//    private static String password="okcThunder00";
     private static Connection conn;
     //装载驱动
     static{

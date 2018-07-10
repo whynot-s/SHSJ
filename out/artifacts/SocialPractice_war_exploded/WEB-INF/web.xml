@@ -32,5 +32,15 @@
         <servlet-name>SearchSevlet</servlet-name>
         <url-pattern>/Search</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SummaryServlet</servlet-name>
+        <servlet-class>Servlets.SummaryServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SummaryServlet</servlet-name>
+        <url-pattern>/Summary</url-pattern>
+    </servlet-mapping>
     
 </web-app>
