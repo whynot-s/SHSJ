@@ -21,6 +21,7 @@ public class SearchTest {
 //        params.put(SearchParams.STUDENTNAME.getKey(), "李艳");
 //        params.put(SearchParams.PROVINCE.getKey(), "山西省");
 //        params.put(SearchParams.CITY.getKey(), "海淀区");
+        params.put(SearchParams.UID.getKey(), "180101");
         try {
             Search search = new Search(params);
             String result = search.getResult();

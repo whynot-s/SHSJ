@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class ProjectReader {
 
-    public static boolean searchProject(Connection conn, Set<Integer> result, Integer dep, String tname, String teacher, boolean first) throws SQLException {
+    public static boolean searchProject(Connection conn, Set<Integer> result, Integer dep, String tname, String teacher, String uid, boolean first) throws SQLException {
         String condition = "";
         boolean AND = false;
         if(dep != null){
@@ -27,6 +27,11 @@ public class ProjectReader {
         if(teacher != null){
             if(AND) condition += "AND ";
             condition += String.format("teamTeacher LIKE \'%s%%\' ", teacher);
+            AND = true;
+        }
+        if(uid != null){
+            if(AND) condition += "AND ";
+            condition += String.format("uid LIKE \'%s%%\' ", uid);
             AND = true;
         }
         if(!AND) return false;

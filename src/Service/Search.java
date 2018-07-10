@@ -31,6 +31,7 @@ public class Search {
                 (Integer) params.get(SearchParams.DEPARTMENT.getKey()),
                 (String)  params.get(SearchParams.TEAMNAME.getKey()),
                 (String)  params.get(SearchParams.TEACHER.getKey()),
+                (String)  params.get(SearchParams.UID.getKey()),
                 true
         );
         re = ScheduleReader.searchProject(conn, pids,
