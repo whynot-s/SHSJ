@@ -19,9 +19,9 @@ public class ExcelReaderTest {
     @Test
     public void test1() {
         File directory = new File("/Users/wangjiaruijue/Documents/tw/data2");
-        String[] readpp = {"03", "04", "06", "10", "12", "13", "07", "17", "团委", "14", "01",
+        String[] readpp = {"02", "03", "04", "05", "06", "10", "12", "13", "07", "17", "团委", "14", "01",
         "15", "29", "73", "校会", "74", "75", "76", "79", "30", "24", "18", "19", "蓝协",
-        "23", "09", "35", "21", "20", "08"};
+        "23", "09", "35", "21", "20", "08", "77"};
         for(File file : directory.listFiles()) {
             boolean flag = false;
             for(String pp : readpp){

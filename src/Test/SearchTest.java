@@ -13,7 +13,7 @@ public class SearchTest {
     @Test
     public void testSearch(){
         Map<String, Object> params = new HashMap<>();
-//        params.put(SearchParams.DEPARTMENT.getKey(), 6);
+//        params.put(SearchParams.DEPARTMENT.getKey(), -1);
 //        params.put(SearchParams.TEAMNAME.getKey(),"天");
 //        params.put(SearchParams.TEACHER.getKey(), "吴塔");
 //        params.put(SearchParams.DATE.getKey(), "2018-07-07");

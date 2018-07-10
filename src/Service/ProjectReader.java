@@ -13,7 +13,10 @@ public class ProjectReader {
         String condition = "";
         boolean AND = false;
         if(dep != null){
-            condition += String.format("depNo = %d ", dep);
+            if(dep == -1)
+                condition += "depNo > 0 ";
+            else
+                condition += String.format("depNo = %d ", dep);
             AND = true;
         }
         if(tname != null){

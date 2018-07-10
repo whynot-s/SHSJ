@@ -46,6 +46,7 @@ public class DBSchedule {
             stmt.execute(String.format(ScheduleSQL_Delete, teamId));
         }
         if(teamId == -1) {
+            System.out.println("INSERT ERROR");
             System.out.println(schedule.getTeamName());
             return 0;
         }
