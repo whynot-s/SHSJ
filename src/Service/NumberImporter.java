@@ -49,7 +49,7 @@ public class NumberImporter {
             }
         }
         conn.close();
-        return r;
+        return 0;
     }
 
     public int updateNumber(Map<Integer, String> numbers) throws SQLException {

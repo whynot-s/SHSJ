@@ -113,7 +113,7 @@ public class DBProject {
 
     public static void UpdateNumber(Connection conn, String uid, int id) throws SQLException {
         Statement stmt = conn.createStatement();
-        stmt.execute(String.format(uid, id));
+        stmt.execute(String.format(ProjectUpdateNumber, uid, id));
     }
 
 }
