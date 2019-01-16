@@ -113,6 +113,7 @@ public class Validation {
                         stuNo = ExcelReader.readCell(row.getCell(ExcelColumn.STU_START.Index(isWinter) + 3 * i + 1)).trim();
                         stuName = ExcelReader.readCell(row.getCell(ExcelColumn.STU_START.Index(isWinter) + 3 * i)).trim();
                     }
+                    if(stuNo.equals("") || stuName.equals("")) continue;
                     boolean flag = false;
                     //队内学号姓名冲突
                     if(!teamMember.containsKey(stuNo)) teamMember.put(stuNo, stuName);
@@ -269,4 +270,7 @@ public class Validation {
         return tmp;
     }
 
+    public String getFilepath() {
+        return filepath;
+    }
 }

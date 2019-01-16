@@ -1,5 +1,6 @@
 package Servlets;
 
+import Model.Season;
 import Service.Validation;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -33,7 +34,7 @@ public class ValidateServlet extends HttpServlet {
         }else{
             try {
                 boolean isWinter = false;
-                if(Integer.parseInt(request.getParameter("winter")) == 1)
+                if(Season.IsWinter())
                     isWinter = true;
                 JSONObject message = new JSONObject();
                 JSONObject data = new JSONObject();
