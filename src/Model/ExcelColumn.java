@@ -28,10 +28,10 @@ public enum ExcelColumn {
     Column 16: 思政指导教师电话
     寒假项目（5人）Column 17-28: 依次为队员姓名、学号、电话
     寒假项目（国内限制5个地点，国（境）外限制3个地点）
-    Column 32: 包含
-    Column 33: 是否出国（境）
-    Column 34-48: 国内5个开始时间、结束时间、地点
-    Column 49-60: 国外3个开始时间、结束时间、地点
+    Column 29: 包含
+    Column 30: 是否出国（境）
+    Column 31-45: 国内5个开始时间、结束时间、地点
+    Column 46-54: 国外3个开始时间、结束时间、地点
     暑假项目（15人）Column 17-59: 依次为队员姓名、学号、电话
  */
 
@@ -48,7 +48,13 @@ public enum ExcelColumn {
     TEACHER2_NAME(15, 15),
     TEACHER2_PHONE(16, 16),
     STU_START(17, 17),
-    STU_END(59, 28);
+    STU_END(59, 28),
+    INCLUDE(60, 29),
+    ONBROAD(61, 30),
+    SCH_DOM_START(62, 31),
+    SCH_DOM_END(76, 45),
+    SCH_GLO_START(77, 46),
+    SCH_GLO_END(85, 54);
 
 
     private int sIndex;

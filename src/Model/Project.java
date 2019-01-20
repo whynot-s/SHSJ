@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Project {
@@ -17,9 +18,10 @@ public class Project {
     private String season;
     private Map<String, String> members;
     private Map<String, String> phones;
+    private ArrayList<Schedule> schedules;
 
     public Project(String teamname, int depno, String teamleader, String teamleaderName, String teamleaderPhone, String Teacher, String TeacherPhone,
-                   String Teacher2, String Teacher2Phone, String Direction, String Season, Map<String, String> Members, Map<String, String> Phones){
+                   String Teacher2, String Teacher2Phone, String Direction, String Season, Map<String, String> Members, Map<String, String> Phones, ArrayList<Schedule> Schedules){
         teamName = teamname;
         depNo = depno;
         teamLeader = teamleader;
@@ -35,6 +37,7 @@ public class Project {
         phones = Phones;
         members.put(teamleader, teamleaderName);
         phones.put(teamleader, teamleaderPhone);
+        schedules = Schedules;
     }
 
     public String getTeamName() {
@@ -83,6 +86,10 @@ public class Project {
 
     public Map<String, String> getPhones() {
         return phones;
+    }
+
+    public ArrayList<Schedule> getSchedules() {
+        return schedules;
     }
 
     public static String ParseDirection(int did){

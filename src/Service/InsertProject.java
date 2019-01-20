@@ -2,12 +2,14 @@ package Service;
 
 import DBTools.DBUtil;
 import Model.Project;
+import Model.Schedule;
 import Model.Season;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,8 @@ public class InsertProject {
                     " \'%s\', \'%s\', %d, \'%s\', \'%s\', \'%s\', \'%s\')";
             String Update_Member_sql = "INSERT INTO Member VALUES(\'%s\', \'%s\', \'%s\') ON DUPLICATE KEY UPDATE stuName = values(stuName), stuPhone = values(stuPhone)";
             String Insert_SchMember_sql = "INSERT INTO SchMember VALUES(%d, \'%s\')";
+            String Insert_Schedule_sql = "INSERT INTO Schedule VALUES(%d, %d, \'%s\', \'%s\', \'%s\')";
+            //添加项目
             for(Project project : projects)
                 stmt.addBatch(String.format(Insert_Project_sql, project.getDepNo(), project.getTeamName(), project.getTeamLeader(),
                         project.getTeamLeaderPhone(), project.getTeacher(), project.getTeacherPhone(), project.getMembers().size(),
@@ -41,6 +45,7 @@ public class InsertProject {
                     pids.put(project.getTeamName(), pid);
                 }
             }
+            //添加项目成员
             for(Project project : projects) {
                 Map<String, String> members = project.getMembers();
                 Map<String, String> phones = project.getPhones();
@@ -50,6 +55,16 @@ public class InsertProject {
                 stmt.executeBatch();
                 for (Map.Entry<String, String> member : members.entrySet())
                     stmt.addBatch(String.format(Insert_SchMember_sql, pid, member.getKey()));
+                stmt.executeBatch();
+            }
+            //添加项目行程
+            for(Project project : projects){
+                ArrayList<Schedule> schedules = project.getSchedules();
+                int pid = pids.get(project.getTeamName());
+                for(int i = 0; i < schedules.size(); i++) {
+                    Schedule schedule = schedules.get(i);
+                    stmt.addBatch(String.format(Insert_Schedule_sql, pid, i + 1, schedule.getPraDate(), schedule.getPraProvince(), schedule.getPraCity()));
+                }
                 stmt.executeBatch();
             }
         } catch (SQLException e) {

@@ -27,7 +27,7 @@ public class ValidateServlet extends HttpServlet {
 //        int status_global = (Integer) session.getAttribute("fid");
         int id = Integer.parseInt(request.getParameter("fid"));
         JSONObject result = new JSONObject();
-        if(!tmp.toString().equals("dev")){
+        if(tmp == null || !tmp.toString().equals("dev")){
             result.put("Status", -1);
             result.put("Message", "Access Denied");
             result.put("Data", new JSONObject());
@@ -43,7 +43,7 @@ public class ValidateServlet extends HttpServlet {
                 result.put("Status", status);
                 result.put("Message", message.getString("message"));
                 result.put("Data", data);
-                validation.summary();
+                if(status == 0) validation.summary();
             }catch (Exception e){
                 result.put("Status", -2);
                 result.put("Message", "Param Errors");
